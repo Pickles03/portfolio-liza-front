@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            try{
+                if (localStorage.getItem("theme") === "light"){
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Projects | Liza</title>
+    <meta name="description" content="Unity game projects and full-stack web apps built by Ielyzaveta Krysiatetska Melnik.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-left">
+            <a href="index.html" class="logo">Liza</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link active">Projects</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="education.html" class="nav-link">Education</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow reveal">What I've built</p>
+                <h2 class="section-title reveal">Projects</h2>
+                <p class="spotlight-hint" id="projectsHint">Scroll to move through each project</p>
+                <div class="spotlight-scroll" id="projectsScroll">
+                    <div class="projects-grid spotlight-stage" id="projectsStage">
+                        <article class="card project-card reveal spotlight-panel">
+                            <div class="project-carousel" data-carousel>
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 1 of 3</span></div>
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 2 of 3</span></div>
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 3 of 3</span></div>
+                                </div>
+                                <button class="carousel-btn prev" type="button" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next" type="button" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-dots">
+                                    <button class="dot active" type="button" aria-label="Go to image 1"></button>
+                                    <button class="dot" type="button" aria-label="Go to image 2"></button>
+                                    <button class="dot" type="button" aria-label="Go to image 3"></button>
+                                </div>
+                            </div>
+                            <div class="card-tag">Unity &middot; In Development</div>
+                            <h3>Borrowed Sight</h3>
+                            <div class="chip-row">
+                                <span class="chip">Unity</span>
+                                <span class="chip">C#</span>
+                                <span class="chip">Mobile</span>
+                            </div>
+                            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-1">
+                                <span>Details</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="details-panel" id="details-1">
+                                <div class="details-inner">
+                                    <p>First-person mobile horror game. The player survives four nights in a bedroom by following increasingly strange rules &mdash; no combat, just observation and restraint.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card project-card reveal spotlight-panel">
+                            <div class="project-carousel" data-carousel>
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 1 of 3</span></div>
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 2 of 3</span></div>
+                                    <div class="carousel-slide"><i class="fa-solid fa-image"></i><span>Image 3 of 3</span></div>
+                                </div>
+                                <button class="carousel-btn prev" type="button" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next" type="button" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-dots">
+                                    <button class="dot active" type="button" aria-label="Go to image 1"></button>
+                                    <button class="dot" type="button" aria-label="Go to image 2"></button>
+                                    <button class="dot" type="button" aria-label="Go to image 3"></button>
+                                </div>
+                            </div>
+                            <div class="card-tag">Unity &middot; Shipped</div>
+                            <h3>Keep Walking</h3>
+                            <div class="chip-row">
+                                <span class="chip">Unity</span>
+                                <span class="chip">C#</span>
+                            </div>
+                            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-2">
+                                <span>Details</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="details-panel" id="details-2">
+                                <div class="details-inner">
+                                    <p>A dark, minimalist horror prototype where a barely-visible entity stalks the player across three escalating levels, with stamina/flashlight resource management that punishes hesitation.</p>
+                                    <a href="https://pickles03.itch.io/keep-walking" target="_blank" rel="noopener noreferrer" class="card-link">
+                                        Play on itch.io <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card project-card reveal spotlight-panel">
+                            <div class="card-tag">Full-Stack Web App</div>
+                            <h3>Game Tracker</h3>
+                            <div class="chip-row">
+                                <span class="chip">React</span>
+                                <span class="chip">Node.js</span>
+                                <span class="chip">Express</span>
+                                <span class="chip">MongoDB</span>
+                            </div>
+                            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-3">
+                                <span>Details</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="details-panel" id="details-3">
+                                <div class="details-inner">
+                                    <p>A game discovery and wishlist app integrating the RAWG API for genre, rating and date filtering, with authentication, infinite scroll, and favoriting.</p>
+                                    <a href="https://github.com/Pickles03/game-tracker-frontend" target="_blank" rel="noopener noreferrer" class="card-link">
+                                        Frontend repo <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://github.com/Pickles03/game-tracker-backend" target="_blank" rel="noopener noreferrer" class="card-link">
+                                        Backend repo <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="spotlight-progress" id="projectsProgress" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ielyzaveta Krysiatetska Melnik. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>

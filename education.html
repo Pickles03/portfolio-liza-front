@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            try{
+                if (localStorage.getItem("theme") === "light"){
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Education | Liza</title>
+    <meta name="description" content="Education background of Ielyzaveta Krysiatetska Melnik: game development, full-stack development, and psychology.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-left">
+            <a href="index.html" class="logo">Liza</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="education.html" class="nav-link active">Education</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow reveal">How I got here</p>
+                <h2 class="section-title reveal">Education</h2>
+                <p class="spotlight-hint" id="educationHint">Scroll to move through each milestone</p>
+                <div class="spotlight-scroll" id="educationScroll">
+                    <div class="education-grid spotlight-stage" id="educationStage">
+                        <div class="edu-card reveal spotlight-panel">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Game Development</h3>
+                            <p class="edu-org">Barcelona Coding School</p>
+                            <p class="edu-date">Jan 2026 &ndash; Mar 2026</p>
+                        </div>
+                        <div class="edu-card reveal spotlight-panel">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Full-Stack Development</h3>
+                            <p class="edu-org">The Bridge &middot; Digital Talent Accelerator</p>
+                            <p class="edu-date">Feb 2025 &ndash; Jul 2025</p>
+                        </div>
+                        <div class="edu-card reveal spotlight-panel">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Bachelor's Degree in Psychology</h3>
+                            <p class="edu-org">University of Barcelona</p>
+                            <p class="edu-date">Sep 2020 &ndash; Jan 2026</p>
+                        </div>
+                        <div class="edu-card reveal spotlight-panel">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Baccalaureate</h3>
+                            <p class="edu-org">Escoles Freta</p>
+                            <p class="edu-date">2018 &ndash; 2020</p>
+                        </div>
+
+                        <div class="spotlight-progress" id="educationProgress" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ielyzaveta Krysiatetska Melnik. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            try{
+                if (localStorage.getItem("theme") === "light"){
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Experience | Liza</title>
+    <meta name="description" content="Work experience of Ielyzaveta Krysiatetska Melnik, from game development internship to IT recruiting and teaching.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-left">
+            <a href="index.html" class="logo">Liza</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="experience.html" class="nav-link active">Experience</a>
+            <a href="education.html" class="nav-link">Education</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow reveal">Where I've worked</p>
+                <h2 class="section-title reveal">Experience</h2>
+                <p class="spotlight-hint" id="experienceHint">Scroll to move through each role</p>
+                <div class="spotlight-scroll" id="experienceScroll">
+                    <div class="timeline spotlight-stage" id="experienceStage">
+                        <div class="timeline-item spotlight-panel">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">August 2026 &ndash; Present</span>
+                                <h3>Unity/C# Mentor</h3>
+                                <p class="timeline-org">Barcelona Coding School</p>
+                                <ul>
+                                    <li>Mentor a student through a structured 13-week Unity curriculum (10 games + a capstone project), holding weekly 1:1 sessions to guide progress.</li>
+                                    <li>Review student GitHub code ahead of each session, giving feedback on C# architecture, Unity design patterns, and coding best practices.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item spotlight-panel">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">March 2026 &ndash; Present</span>
+                                <h3>Game Developer <span class="role-type">Internship</span></h3>
+                                <p class="timeline-org">So Amazing Games</p>
+                                <ul>
+                                    <li>Developing Borrowed Sight, a first-person mobile horror game in Unity and C#, owning core systems including rule-based player interactions, atmosphere mechanics, and mobile performance optimisation.</li>
+                                    <li>Collaborating in a team environment on design decisions and functionality, with hands-on debugging and iterative playtesting to refine player experience.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item spotlight-panel">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Oct 2024 &ndash; Jan 2025</span>
+                                <h3>IT Recruiter</h3>
+                                <p class="timeline-org">Aictina Consulting</p>
+                                <ul>
+                                    <li>Recruited for technical roles using LinkedIn Recruiter and TalentClue; developed a working understanding of ICT stacks and infrastructure through daily collaboration with engineers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item spotlight-panel">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Sep 2023 &ndash; Jan 2024</span>
+                                <h3>English Teacher</h3>
+                                <p class="timeline-org">Kids &amp; Us</p>
+                                <ul>
+                                    <li>Taught English to children; built communication, multitasking, and adaptability skills in a fast-paced environment.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="spotlight-progress" id="experienceProgress" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ielyzaveta Krysiatetska Melnik. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>

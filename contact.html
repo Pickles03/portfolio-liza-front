@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            try{
+                if (localStorage.getItem("theme") === "light"){
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Contact | Liza</title>
+    <meta name="description" content="Get in touch with Ielyzaveta Krysiatetska Melnik.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-left">
+            <a href="index.html" class="logo">Liza</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="education.html" class="nav-link">Education</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow reveal">Let's talk</p>
+                <h2 class="section-title reveal">Contact</h2>
+                <p class="section-subtitle reveal">Have a project in mind, or just want to say hi? I'd love to hear from you.</p>
+                <div class="contact-grid">
+                    <a class="contact-card reveal" href="mailto:elizaveta.kris@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Say hello</span>
+                    </a>
+                    <a class="contact-card reveal" href="https://www.linkedin.com/in/liza-kris" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="contact-card reveal" href="https://github.com/Pickles03" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ielyzaveta Krysiatetska Melnik. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>

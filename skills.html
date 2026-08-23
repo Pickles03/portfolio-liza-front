@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function(){
+            try{
+                if (localStorage.getItem("theme") === "light"){
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Skills | Liza</title>
+    <meta name="description" content="Game development, front-end, back-end and tooling skills of Ielyzaveta Krysiatetska Melnik.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="siteHeader">
+        <div class="header-left">
+            <a href="index.html" class="logo">Liza</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link active">Skills</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="education.html" class="nav-link">Education</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <p class="eyebrow reveal">What I work with</p>
+                <h2 class="section-title reveal">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group reveal">
+                        <h3><i class="fa-solid fa-gamepad"></i> Game</h3>
+                        <div class="chip-row">
+                            <span class="chip">Unity</span>
+                            <span class="chip">C# (OOP)</span>
+                            <span class="chip">Gameplay Mechanics</span>
+                            <span class="chip">UI</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3><i class="fa-solid fa-code"></i> Front-End</h3>
+                        <div class="chip-row">
+                            <span class="chip">HTML5</span>
+                            <span class="chip">CSS3</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">React</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3><i class="fa-solid fa-server"></i> Back-End</h3>
+                        <div class="chip-row">
+                            <span class="chip">Node.js</span>
+                            <span class="chip">Express</span>
+                            <span class="chip">REST APIs</span>
+                            <span class="chip">MongoDB</span>
+                            <span class="chip">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+                        <div class="chip-row">
+                            <span class="chip">Git</span>
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Postman</span>
+                            <span class="chip">Vite</span>
+                            <span class="chip">Jest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="languages reveal">
+                    <h3><i class="fa-solid fa-language"></i> Languages</h3>
+                    <div class="lang-grid">
+                        <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">C2 &middot; Native</span></div>
+                        <div class="lang-item"><span class="lang-name">Russian</span><span class="lang-level">C2 &middot; Native</span></div>
+                        <div class="lang-item"><span class="lang-name">Spanish</span><span class="lang-level">C1 &middot; Fluent</span></div>
+                        <div class="lang-item"><span class="lang-name">Catalan</span><span class="lang-level">B2/C1 &middot; Conversational</span></div>
+                        <div class="lang-item"><span class="lang-name">Ukrainian</span><span class="lang-level">B2 &middot; Basic/Conversational</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ielyzaveta Krysiatetska Melnik. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>

@@ -147,6 +147,17 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
         index = (target + slides.length) % slides.length;
         track.style.transform = `translateX(-${index * 100}%)`;
         dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+
+        slides.forEach((slide, slideIndex) => {
+            const video = slide.querySelector('video');
+            if (!video) return;
+            if (slideIndex === index){
+                video.currentTime = 0;
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
     }
 
     function startAuto(){

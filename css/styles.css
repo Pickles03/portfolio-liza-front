@@ -547,6 +547,21 @@ main > .section:first-child{
     margin-bottom: 1.6rem;
 }
 
+.project-carousel[data-carousel]{
+    aspect-ratio: 16 / 9;
+    border: none;
+    background: #000;
+    border-radius: 1rem;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.project-carousel.portrait{
+    aspect-ratio: 9 / 19.5;
+    width: 260px;
+    max-width: 72%;
+    margin: 0 auto 1.6rem;
+}
+
 .carousel-track{
     display: flex;
     height: 100%;
@@ -562,6 +577,17 @@ main > .section:first-child{
     gap: 0.6rem;
     color: var(--text-dim);
     font-size: 0.8rem;
+}
+
+.project-carousel.portrait .carousel-slide{
+    height: 100%;
+}
+
+.carousel-slide img,
+.carousel-slide video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .carousel-slide i{
@@ -911,6 +937,10 @@ main > .section:first-child{
 
 .spotlight-scroll.spotlight-active .project-card.spotlight-panel{
     width: min(90vw, 560px);
+}
+
+.spotlight-scroll.spotlight-active .project-card.vertical-project{
+    width: min(90vw, 460px);
 }
 
 .spotlight-scroll.spotlight-active .timeline-item.spotlight-panel{

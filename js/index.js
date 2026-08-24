@@ -2,14 +2,17 @@ const themeToggle = document.getElementById('themeToggle');
 
 if (themeToggle){
     const THEME_KEY = 'theme';
+    const themeToggleKnob = themeToggle.querySelector('.theme-toggle-knob');
 
     function applyTheme(theme){
         if (theme === 'light'){
             document.documentElement.setAttribute('data-theme', 'light');
-            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            themeToggleKnob.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/><line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/><line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/></svg>';
+            themeToggle.setAttribute('aria-checked', 'true');
         } else {
             document.documentElement.removeAttribute('data-theme');
-            themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            themeToggleKnob.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            themeToggle.setAttribute('aria-checked', 'false');
         }
     }
 
@@ -245,7 +248,7 @@ function initSpotlight(scrollId, stageId, progressId, hintId){
 
             panel.style.opacity = opacity.toFixed(3);
             panel.style.transform = `translateY(${translateY.toFixed(1)}px) scale(${scale.toFixed(3)})`;
-            panel.style.filter = `blur(${blur.toFixed(2)}px)`;
+            panel.style.filter = blur > 0.05 ? `blur(${blur.toFixed(2)}px)` : '';
             panel.style.pointerEvents = absProgress < 0.5 ? 'auto' : 'none';
         });
 

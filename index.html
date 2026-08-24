@@ -22,8 +22,8 @@
     <header id="siteHeader">
         <div class="header-left">
             <a href="index.html" class="logo">Liza</a>
-            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
-                <i class="fa-solid fa-moon"></i>
+            <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light/dark mode">
+                <span class="theme-toggle-knob"><i class="fa-solid fa-moon"></i></span>
             </button>
         </div>
 
@@ -50,7 +50,7 @@
                 <div class="home-content">
                     <h1>Hi, I'm <span class="grad-text">Liza</span></h1>
                     <h4>Ielyzaveta Krysiatetska Melnik to be exact, but Liza tends to be easier.</h4>
-                    <h3 class="typing-text">I'm a <span id="typedWord"></span></h3>
+                    <h3 class="typing-text">I'm a <span id="typedWord"></span><span class="typed-cursor" aria-hidden="true"></span></h3>
                     <p>Game developer with a background in psychology, specializing in horror. I aim to explore how tension, uncertainty, and player perception can be engineered into genuinely unsettling experiences. Currently in Barcelona.</p>
                     <div class="cta-group">
                         <a href="projects.html" class="btn btn-solid">View Projects</a>

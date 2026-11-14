@@ -966,7 +966,39 @@ main > .section:first-child{
     height: fit-content;
     max-height: 82vh;
     overflow: auto;
+    overscroll-behavior: contain;
     transition: none;
+}
+
+@supports not selector(::-webkit-scrollbar){
+    .spotlight-scroll.spotlight-active .spotlight-panel{
+        scrollbar-width: thin;
+        scrollbar-color: rgba(var(--purple-rgb), 0.55) transparent;
+    }
+}
+
+.spotlight-scroll.spotlight-active .spotlight-panel::-webkit-scrollbar{
+    width: 6px;
+}
+
+.spotlight-scroll.spotlight-active .spotlight-panel::-webkit-scrollbar-button{
+    display: none;
+    height: 0;
+}
+
+.spotlight-scroll.spotlight-active .spotlight-panel::-webkit-scrollbar-track{
+    background: transparent;
+    margin: 1rem 0;
+}
+
+.spotlight-scroll.spotlight-active .spotlight-panel::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--purple-rgb), 0.55);
+    border-radius: 999px;
+}
+
+.spotlight-scroll.spotlight-active .project-carousel.portrait{
+    width: auto;
+    height: min(563px, 46vh);
 }
 
 .spotlight-scroll.spotlight-active .project-card.spotlight-panel{
